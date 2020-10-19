@@ -116,6 +116,7 @@ src
 - reccomnded reading based on genre
 - review section
 - search to look if a book is already in system
+- to add a status function, if you are reading a book, have read the book, if it is lent out to someone. maybe even how you own it digital, audio, physical
 
 ---
 
