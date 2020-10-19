@@ -23,10 +23,22 @@ Book.create!([{ title: 'Neuromancer' }, { author: 'William Gibson' }, { descript
 the matrix-until he crossed the wrong people and they crippled his nervous system, banishing him from cyberspace. Now a
 mysterious new employer has recruited him for a last-chance run at an unthinkably powerful artifical intelligence. With
 a dead man riding shotgun and Molly, a mirror-eyed street samurai, to watch his back, Case is ready for the adventure
-that upped the ante of an entire genre of fiction. ' }, { user_id: 1 }])
+that upped the ante of an entire genre of fiction. ' }, { image: 'https://imgur.com/wfPdQIk.png' }, { user_id: 1 }])
 
 Book.create!([{ title: "The Hitchhiker's Guide to the Galaxy" }, { author: 'Douglas Adams' }, { description: "It's and
 ordinary Thursday lunchtime for Arthur Dent until his house gets demolished. The Earth follows shortly afterwords, to
 make way for a new hypserspace bypass, and his best friend just announced that he's an alien. At this moment they're
 hurtling through space with nothing but their towels and an innocuous-looking book
-inscribed with the big, friendly words: DON'T PANIC." }, { user_id: 1 }])
+inscribed with the big, friendly words: DON'T PANIC." }, { image: 'https://imgur.com/qf4PIqc.png' }, { user_id: 1 }])
+
+Book.create!([{ title: 'The Call of Cthulhu' }, { author: 'H.P. Lovecraft' },
+{ description: "H.P. Lovecraft's classic tale of an expedition to Antarctica and the surprising
+discoveries made by the explorers" }, { image: 'https://imgur.com/yhods4H.png' }, { user_id: 1 }])
+
+Genre.create!(name: 'Fantasy')
+Genre.create!(name: 'Sicence Fiction')
+Genre.create!(name: 'Mystery ')
+Genre.create!(name: 'Horror')
+Genre.create!(name: 'Thriller')
+Genre.create!(name: 'Romance')
+Genre.create!(name: 'Action/Adventure')
