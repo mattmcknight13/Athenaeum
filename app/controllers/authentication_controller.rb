@@ -2,7 +2,7 @@ class AuthenticationController < ApplicationController
   before_action :authorize_request, except: :login
 
   def login
-    @user = User.find_by(username: login_params[:username])
+    @user = User.find_by(name: login_params[:name])
     if @user.authenticate(login_params[:password])
       token = encode({ id: @user.id })
       render json: {
@@ -21,6 +21,6 @@ class AuthenticationController < ApplicationController
   private
 
   def login_params
-    params.require(:authentication).permit(:username, :password)
+    params.require(:authentication).permit(:name, :password)
   end
 end

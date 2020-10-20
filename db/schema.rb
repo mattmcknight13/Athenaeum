@@ -13,35 +13,35 @@
 ActiveRecord::Schema.define(version: 2020_10_19_195211) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "description"
-    t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
-    t.bigint "genre_id", null: false
-    t.index ["genre_id"], name: "index_books_on_genre_id"
-    t.index ["user_id"], name: "index_books_on_user_id"
+  create_table 'books', force: :cascade do |t|
+    t.string 'title'
+    t.string 'author'
+    t.string 'description'
+    t.string 'image'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.bigint 'user_id', null: false
+    t.bigint 'genre_id', null: false
+    t.index ['genre_id'], name: 'index_books_on_genre_id'
+    t.index ['user_id'], name: 'index_books_on_user_id'
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'genres', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.string 'email'
+    t.string 'password_digest'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  add_foreign_key "books", "genres"
-  add_foreign_key "books", "users"
+  add_foreign_key 'books', 'genres'
+  add_foreign_key 'books', 'users'
 end
