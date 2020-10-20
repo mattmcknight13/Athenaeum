@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Login from './screens/Login'
+import Register from './screens/Register'
+import MainContainer from './containers/MainContainer'
 import Layout from "./layouts/Layout";
 import {
   loginUser,
