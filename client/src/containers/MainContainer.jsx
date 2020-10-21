@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import { getAllBooks, postBook } from '../services/books'
-import { getAllGenres } from '../services/genres'
 import Books from '../screens/Books'
 import BookCreate from '../screens/BookCreate'
+import BookDetail from '../screens/BookDetail'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
-  const [genres, setGenres] = useState([])
   const history = useHistory()
 
   useEffect(() => {
@@ -15,12 +14,7 @@ export default function MainContainer() {
       const booksData = await getAllBooks();
       setBooks(booksData);
     }
-    const fetchGenres = async () => {
-      const genresData = await getAllGenres();
-      setGenres(genresData);
-    }
     fetchBooks()
-    fetchGenres()
   }, [])
   
   const handleBookCreate = async (bookData) => {
@@ -35,6 +29,9 @@ export default function MainContainer() {
         <BookCreate
           handleBookCreate={handleBookCreate}
         />
+      </Route>
+      <Route path='/books/:id'>
+        <BookDetail />
       </Route>
       <Route path="/books">
         <Books books={books}/>
