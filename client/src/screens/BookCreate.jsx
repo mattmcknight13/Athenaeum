@@ -8,26 +8,29 @@ export default function BookCreate(props) {
     image: '',
     genre: ''
   })
-  const [genreId, setGenreId] = useState('')
-  const { handleFoodCreate } = props;
+  // const [genreId, setGenreId] = useState('')
+  const { handleBookCreate } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ [name]: value })
+    setFormData({
+      ...formData,
+      [name]: value
+    })
   }
-  const handleGenre = (e) => {
-    const { value } = e.target;
-    setGenreId(value);
-  }
+  // const handleGenre = (e) => {
+  //   const { value } = e.target;
+  //   setGenreId(value);
+  // }
 
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleFoodCreate(formData);
+      handleBookCreate(formData);
     }}>
       <h3>Add Book</h3>
       <label>
-        Name:
+        Title:
         <input
           type="text"
           name='title'
@@ -55,7 +58,7 @@ export default function BookCreate(props) {
         <input
           type="text"
           name='image'
-          alt={formData.name}
+          alt={formData.title}
           value={formData.image}
           onChange={handleChange}
         />
