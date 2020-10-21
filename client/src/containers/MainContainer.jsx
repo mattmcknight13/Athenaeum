@@ -42,7 +42,7 @@ export default function MainContainer() {
       <Route path='/books/:id/edit'>
         <BookEdit
           handleBookEdit={handleBookEdit}
-          books={books}
+          
         />
         </Route>
       <Route path='/books/:id'>
