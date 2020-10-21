@@ -23,7 +23,7 @@ export default function BookDetail(props) {
           <h1>{book.title}</h1>
           <h3>{book.author}</h3>
           {/* <h5>{book.genre.name}</h5> */}
-          <Link to='/books/:id/edit'><button>Edit</button></Link>
+          <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
           <button>Delete</button>
           <h5>{book.description}</h5>
         </>
