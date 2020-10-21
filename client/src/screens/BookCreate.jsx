@@ -7,13 +7,17 @@ export default function BookCreate(props) {
     description: '',
     image: '',
     genre: ''
-
   })
+  const [genreId, setGenreId] = useState('')
   const { handleFoodCreate } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ [name]: value })
+  }
+  const handleGenre = (e) => {
+    const { value } = e.target;
+    setGenreId(value);
   }
 
   return (
@@ -21,7 +25,7 @@ export default function BookCreate(props) {
       e.preventDefault();
       handleFoodCreate(formData);
     }}>
-      <h3>Create Food</h3>
+      <h3>Add Book</h3>
       <label>
         Name:
         <input
@@ -30,26 +34,32 @@ export default function BookCreate(props) {
           value={formData.title}
           onChange={handleChange}
         />
+      </label>
+      <label> Author:
         <input
           type="text"
           name='author'
           value={formData.author}
           onChange={handleChange}
         />
+      </label>
+      <label>Description
         <input
           type="textarea"
           name='description'
           value={formData.description}
           onChange={handleChange}
         />
+      </label>
+      <label>Cover image
         <input
-          type="image"
+          type="text"
           name='image'
           alt={formData.name}
           value={formData.image}
           onChange={handleChange}
         />
-      </label>
+        </label>
       <button>Create</button>
     </form>
   )

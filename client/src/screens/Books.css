@@ -1,0 +1,14 @@
+.books {
+  display: flex;
+}
+
+.collection {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.img {
+  width: 200px;
+  height: 250px;
+  margin: 70px;
+}
