@@ -11,7 +11,7 @@ export default function Header(props) {
       {
         currentUser ?
           <>
-            <p>{currentUser.username}</p>
+            <p>{currentUser.name}</p>
             <button onClick={handleLogout}>Logout</button>
           </>
           :
