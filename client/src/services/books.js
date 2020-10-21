@@ -25,7 +25,7 @@ export const destroyBook = async (id) => {
   return res;
 };
 
-export const addGenre = async (genreId, genreId) => {
-  const res = await api.put(`/genres/${genreId}/books/${genreId}`);
+export const addGenre = async (bookId, genreId) => {
+  const res = await api.put(`/genres/${genreId}/books/${bookId}`);
   return res.data;
 };
