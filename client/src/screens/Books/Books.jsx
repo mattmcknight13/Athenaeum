@@ -19,9 +19,9 @@ export default function Books(props) {
       {
         books.map(book => (
           <tr key={book.id}>
-            <div>
+            <td>
               <Link to={`/books/${book.id}`}><img className='img' src={book.image} alt={book.title} /></Link>
-              </div>
+              </td>
           </tr>
         ))
         }

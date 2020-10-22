@@ -13,7 +13,7 @@
 .collection {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .img {
@@ -21,3 +21,27 @@
   height: 250px;
   margin: 70px;
 }
+
+@media only screen and (min-width: 768px) {
+  .books {
+    width: 300px;
+  }
+
+  .collection {
+    width: 700px;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .img {
+    width: 400px;
+    height: 500px;
+    
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
