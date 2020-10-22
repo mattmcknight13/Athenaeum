@@ -1,17 +1,20 @@
 .header {
-  background-color: #08085a;
+  background-color: #ab92bf;
   display: flex;
-  
 }
 
 .site-name {
-  color: #D4AF37;
+  color: #d6ca98;
   display: flex;
   justify-content: center;
 }
 
 .login {
   display: flex;
+  height: 20px;
+  width: 200px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 ol{
