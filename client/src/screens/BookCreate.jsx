@@ -32,7 +32,6 @@ export default function BookCreate(props) {
       handleBookCreate(formData);
       const genre = await addGenre( genreId)
       setFormData(genre)
-      
     }}>
       <h3>Add Book</h3>
       <label>
