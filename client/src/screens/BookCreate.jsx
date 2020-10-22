@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { addGenre } from '../services/books'
+
 
 export default function BookCreate(props) {
+  const { genres } = props
   const [formData, setFormData] = useState({
     title: '',
     author: '',
@@ -8,7 +11,7 @@ export default function BookCreate(props) {
     image: '',
     genre: ''
   })
-  // const [genreId, setGenreId] = useState('')
+  const [genreId, setGenreId] = useState('')
   const { handleBookCreate } = props;
 
   const handleChange = (e) => {
@@ -18,15 +21,18 @@ export default function BookCreate(props) {
       [name]: value
     })
   }
-  // const handleGenre = (e) => {
-  //   const { value } = e.target;
-  //   setGenreId(value);
-  // }
+  const handleGenre = (e) => {
+    const { value } = e.target;
+    setGenreId(value);
+  }
 
   return (
-    <form onSubmit={(e) => {
+    <form onSubmit={ async (e) => {
       e.preventDefault();
       handleBookCreate(formData);
+      const genre = await addGenre( genreId)
+      setFormData(genre)
+      
     }}>
       <h3>Add Book</h3>
       <label>
@@ -62,7 +68,15 @@ export default function BookCreate(props) {
           value={formData.image}
           onChange={handleChange}
         />
-        </label>
+      </label>
+      <label htmlFor='genre'> 
+        <select id='genre' defaultValue='default' onChange={handleGenre}>
+          <option disabled value='default'>--select Genre--</option>
+          {genres.map(genre => (
+            <option value={genre.id} key={genre.id}>{genre.name}</option>
+          ))}
+        </select>
+      </label>
       <button>Create</button>
     </form>
   )

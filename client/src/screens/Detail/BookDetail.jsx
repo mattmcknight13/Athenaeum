@@ -4,6 +4,7 @@ import { getOneBook } from '../../services/books'
 import './BookDetail.css'
 
 export default function BookDetail(props) {
+  const { handleBookDelete } = props
   const [book, setBook] = useState(null);
   const { id } = useParams();
 
@@ -22,12 +23,16 @@ export default function BookDetail(props) {
           <img className='image' src={book.image} alt={book.title} />
           <h1>{book.title}</h1>
           <h3>{book.author}</h3>
-          {/* <h5>{book.genre.name}</h5> */}
+          <h5>{book.genre}</h5>
           <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
-          <button>Delete</button>
           <h5>{book.description}</h5>
         </>
       }
+      <button onClick={(e) => {
+        e.preventDefault(
+          handleBookDelete(id)
+        )
+      }}>Delete</button>
       
     </div>
   )

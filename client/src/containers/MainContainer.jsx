@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import { getAllBooks, postBook, putBook } from '../services/books'
+import { getAllBooks, postBook, putBook, destroyBook } from '../services/books'
+import { getAllGenres } from '../services/genres'
 import Books from '../screens/Books'
 import BookCreate from '../screens/BookCreate'
 import BookDetail from '../screens/Detail/BookDetail'
@@ -8,6 +9,7 @@ import BookEdit from '../screens/BookEdit'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
+  const [genres, setGenres] = useState([])
   const history = useHistory()
 
   useEffect(() => {
@@ -15,7 +17,12 @@ export default function MainContainer() {
       const booksData = await getAllBooks();
       setBooks(booksData);
     }
+    const fetchGenres = async () => {
+      const genresData = await getAllGenres()
+      setGenres(genresData)
+    }
     fetchBooks()
+    fetchGenres()
   }, [])
   
   const handleBookCreate = async (bookData) => {
@@ -32,21 +39,29 @@ export default function MainContainer() {
     history.push(`/books/${id}`)
   }
 
+  const handleBookDelete = async (id) => {
+    await destroyBook(id)
+    setBooks(prevState => prevState.filter(book => book.id !== id))
+    history.push('/books')
+  }
+
   return (
     <Switch>
       <Route path='/books/new'>
         <BookCreate
           handleBookCreate={handleBookCreate}
+          genres = {genres}
         />
       </Route>
       <Route path='/books/:id/edit'>
         <BookEdit
-          handleBookEdit={handleBookEdit}
-          
+          handleBookEdit={handleBookEdit} 
         />
         </Route>
       <Route path='/books/:id'>
-        <BookDetail />
+        <BookDetail
+          handleBookDelete={handleBookDelete}
+        />
       </Route>
       <Route path="/books">
         <Books books={books}/>

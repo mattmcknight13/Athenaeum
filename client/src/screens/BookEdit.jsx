@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 
 export default function BookEdit(props) {
-  const { handleBookEdit} = props
+  const { handleBookEdit } = props
   const { id } = useParams()
   const [formData, setFormData] = useState({
     title: '',
