@@ -24,7 +24,7 @@ export default function Header(props) {
           }
       </div>
       </div>
-     <div>
+     <div className='nav'>
       <nav>
         <ol>
           <li><Link>My Books</Link></li>
