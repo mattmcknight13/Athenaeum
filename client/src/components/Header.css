@@ -1,16 +1,26 @@
 .header {
-  background-color: #b9a394;
+  background-color: #08085a;
+  display: flex;
+  
 }
 
-.nav {
+.site-name {
+  color: #D4AF37;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .login {
   display: flex;
-  align-self: center;
-  
+}
+
+ol{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li{
+  border: solid;
 }
 
 .logout {

@@ -1,4 +1,9 @@
 .image {
-  width: 330px;
-  height: 500px;
+  width: 230px;
+  height: 300px;
+}
+
+.detail-description {
+  width: 350px;
+  overflow: hidden;
 }

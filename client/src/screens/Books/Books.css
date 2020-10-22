@@ -1,0 +1,23 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+}
+.col-1 {
+  display: flex;
+  height: 20px;
+  justify-content: space-evenly;
+}
+
+.collection {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.img {
+  width: 200px;
+  height: 250px;
+  margin: 70px;
+}

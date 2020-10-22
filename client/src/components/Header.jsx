@@ -7,9 +7,11 @@ export default function Header(props) {
   const { currentUser, handleLogout } = props;
 
   return (
+    <>
     <div className='header'>
-      <div className='nav'>
+      <div className='site-name'>
         <h1>Athenaeum</h1>
+        </div>
         <div className='login'>
       {
         currentUser ?
@@ -20,9 +22,18 @@ export default function Header(props) {
           :
           <Link to='/login'>Login/Register</Link>
           }
-          </div>
-        </div>
+      </div>
+      </div>
+     <div>
+      <nav>
+        <ol>
+          <li><Link>My Books</Link></li>
+          <li><Link to='/books'>Browse</Link></li>
+        </ol>
+
+      </nav>
       <hr />
-    </div>
+      </div>
+      </>
   )
 }

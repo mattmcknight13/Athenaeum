@@ -17,23 +17,30 @@ export default function BookDetail(props) {
   }, [id])
   return (
     <div >
+      <div>
       {
         book &&
         <>
           <img className='image' src={book.image} alt={book.title} />
-          <h1>{book.title}</h1>
-          <h3>{book.author}</h3>
-          <h5>{book.genre}</h5>
-          <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
-          <h5>{book.description}</h5>
+          <h1 className='detail-title'>{book.title}</h1>
+          <h3 className='detail-author'>{book.author}</h3>
+          <h5 className='detail-genre'>{book.genre.name}</h5>
+          
+          <span className='detail-description'>{book.description}</span>
         </>
-      }
+        }
+      </div>
+      <div>
       <button onClick={(e) => {
         e.preventDefault(
           handleBookDelete(id)
         )
       }}>Delete</button>
-      
+      {
+        book &&
+        <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
+      }
+      </div>
     </div>
   )
 }
