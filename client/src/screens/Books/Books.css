@@ -1,8 +1,16 @@
+td {
+  border-top: 1px solid #CCC;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(204, 204, 204);
+}
+
 .books {
   display: flex;
   flex-direction: column;
   width: 400px;
   justify-content: center;
+  
 }
 .col-1 {
   display: flex;

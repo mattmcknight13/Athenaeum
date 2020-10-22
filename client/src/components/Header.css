@@ -21,11 +21,14 @@
 ol{
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
 }
 
 li{
-  border: solid;
+  text-decoration: none;
 }
+
+
 
 .logout {
   height: 20px;

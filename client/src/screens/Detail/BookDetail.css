@@ -1,9 +1,11 @@
 .book-Detail {
   width: 100%;
+ 
 }
 
 .book-Info {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .image {
@@ -11,9 +13,17 @@
   height: 300px;
 }
 
+.text-box {
+  width: 300px;
+  word-wrap: break-word;
+}
+
 .detail-Description {
-  width: 350px;
-  overflow: hidden;
+  width: 150px;
+  font-size: 10px;
+ 
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
 }
 
 .buttons {
@@ -27,9 +37,11 @@
   }
   .detail-Description {
     width: 250px;
-    overflow: hidden;
-    
+    font-size: 20px;
+    margin-left: 20px;
   }
+
+  
 
 }
 

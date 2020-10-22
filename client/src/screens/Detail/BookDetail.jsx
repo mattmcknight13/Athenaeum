@@ -30,8 +30,8 @@ export default function BookDetail(props) {
           <h3 className='detail-Author'>{book.author}</h3>
           <h5 className='detail-Genre'>{book.genre.name}</h5>
           </div>
-          <div>
-          <span className='detail-Description'>{book.description}</span>
+          <div className='text-box'>
+          <span className='detail-Description'>"{book.description}"</span>
           </div>
           </div>
         </>
