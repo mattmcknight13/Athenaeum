@@ -1,0 +1,28 @@
+.header {
+  background-color: #08085a;
+  display: flex;
+  
+}
+
+.site-name {
+  color: #D4AF37;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+}
+
+ol{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li{
+  border: solid;
+}
+
+.logout {
+  height: 20px;
+}
