@@ -3,8 +3,14 @@ class BooksController < ApplicationController
   before_action :authorize_request, only: [:create, :update, :destroy]
   
   def index
-    @books = Book.all
-    render json: @books, include: :genre
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      books = @user.books
+      render json: books, include: :user
+    else
+      @books = Book.all
+      render json: @books, include: :genre
+    end
   end
 
   def show

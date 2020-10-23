@@ -5,6 +5,11 @@ export const getAllBooks = async () => {
   return res.data;
 };
 
+export const getUserBooks = async (id) => {
+  const res = await api.get(`/users/${id}/books`)
+  return res.data
+}
+
 export const getOneBook = async (id) => {
   const res = await api.get(`/books/${id}`);
   return res.data;

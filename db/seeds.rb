@@ -41,7 +41,7 @@ make way for a new hypserspace bypass, and his best friend just announced that h
 hurtling through space with nothing but their towels and an innocuous-looking book
 inscribed with the big, friendly words: DON'T PANIC.", image: 'https://imgur.com/qf4PIqc.png', user: @user, genre: @sf)
 
-@cc = Book.create!(title: 'The Call of Cthulhu', author: 'H.P. Lovecraft',
+@cc = Book.create!(title: 'At the Mountains of Madness', author: 'H.P. Lovecraft',
 description: "H.P. Lovecraft's classic tale of an expedition to Antarctica and the surprising
 discoveries made by the explorers", image: 'https://imgur.com/yhods4H.png', user: @user, genre: @horror)
 puts "#{Book.count} Books created"

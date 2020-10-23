@@ -27,7 +27,7 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push("/books");
+    history.push(`/user/${userData.id}/books`);
   };
 
   const handleRegister = async (registerData) => {

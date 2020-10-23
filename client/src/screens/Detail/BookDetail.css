@@ -1,9 +1,47 @@
+.book-Detail {
+  width: 100%;
+}
+
+.book-Info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .image {
   width: 230px;
   height: 300px;
 }
 
-.detail-description {
-  width: 350px;
-  overflow: hidden;
+.text-box {
+  width: 300px;
+  word-wrap: break-word;
+}
+
+.detail-Description {
+  width: 150px;
+  font-size: 10px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .image {
+    width: 530px;
+    height: 600px;
+  }
+
+  .detail-Description {
+    width: 250px;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  
+
+}
+
+@media only screen and (min-width: 1200px) {
+
 }

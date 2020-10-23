@@ -8,7 +8,7 @@ export default function Login(props) {
   })
 
   const { name, password } = formData;
-  const { error, handleLogin } = props;
+  const { handleLogin } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,10 +25,6 @@ export default function Login(props) {
       handleLogin(formData);
     }}>
       <h3>Login</h3>
-      {
-        error &&
-        <p>{error}</p>
-      }
       <label>
         Username:
         <input
