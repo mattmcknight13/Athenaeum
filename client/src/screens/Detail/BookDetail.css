@@ -1,6 +1,5 @@
 .book-Detail {
   width: 100%;
- 
 }
 
 .book-Info {
@@ -32,6 +31,7 @@
     width: 530px;
     height: 600px;
   }
+
   .detail-Description {
     width: 250px;
     font-size: 20px;

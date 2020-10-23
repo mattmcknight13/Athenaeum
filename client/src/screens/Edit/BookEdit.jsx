@@ -23,7 +23,7 @@ export default function BookEdit(props) {
     if (books.length > 0) {
       preFillFormData()
     }
-  },[books, id])
+  },[books, id,formData])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

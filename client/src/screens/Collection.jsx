@@ -13,13 +13,13 @@ export default function Collection(props) {
       setUserBooks(userBooks)
     }
     fetchUserBooks(id)
-  },[])
+  },[setUserBooks,id])
 
-  console.log(userBooks)
+
 
   return (
-    <div>
-      <h1>User</h1>
+    <table>
+    <tbody>
       {
         userBooks &&
         userBooks.map(book => (
@@ -30,6 +30,7 @@ export default function Collection(props) {
           </tr>
         ))
         }
-    </div>
+      </tbody>
+      </table>
   )
 }

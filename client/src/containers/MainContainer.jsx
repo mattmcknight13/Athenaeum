@@ -46,7 +46,6 @@ export default function MainContainer() {
     await destroyBook(id)
     setBooks(prevState => prevState.filter(book => book.id !== id))
     history.push('/books')
-    window.location.reload('/books')
   }
 
   return (
