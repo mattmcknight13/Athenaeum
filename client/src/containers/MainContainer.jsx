@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import { getAllBooks, postBook, putBook, destroyBook } from '../services/books'
 import { getAllGenres } from '../services/genres'
+import Collection from '../screens/Collection'
 import Books from '../screens/Books/Books'
 import BookCreate from '../screens/Create/BookCreate'
 import BookDetail from '../screens/Detail/BookDetail'
@@ -9,14 +10,16 @@ import BookEdit from '../screens/Edit/BookEdit'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
+  const [userBooks, setUserBooks ] = useState([])
   const [genres, setGenres] = useState([])
   const history = useHistory()
-
+  
   useEffect(() => {
     const fetchBooks = async () => {
       const booksData = await getAllBooks();
       setBooks(booksData);
     }
+
     const fetchGenres = async () => {
       const genresData = await getAllGenres()
       setGenres(genresData)
@@ -48,6 +51,9 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route path='/user/:id/books'>
+        <Collection userBooks={userBooks} setUserBooks={setUserBooks}/>
+      </Route>
       <Route path='/books/new'>
         <BookCreate
           handleBookCreate={handleBookCreate}

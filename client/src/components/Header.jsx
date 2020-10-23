@@ -26,9 +26,12 @@ export default function Header(props) {
       </div>
      <div className='nav'>
       <nav>
-        <ol>
-          <li><Link>My Books</Link></li>
-          <li><Link to='/books'>Browse</Link></li>
+          <ol>
+            {
+              currentUser &&
+              <li><Link to={`/user/${currentUser.id}/books`}>My Books</Link></li>
+            }
+          <li><Link to='/books'>Browse Books</Link></li>
         </ol>
 
       </nav>

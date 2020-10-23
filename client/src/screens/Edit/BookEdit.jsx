@@ -15,12 +15,12 @@ export default function BookEdit(props) {
 
   useEffect(() => {
     const preFillFormData = () => {
-      const { name, value } = books.find(book => book.id === Number(id))
+      const { name, value } = books.filter(book => book.id === Number(id))
       setFormData({
         ...formData,
         [name]: value })
     }
-    if (books.length) {
+    if (books.length > 0) {
       preFillFormData()
     }
   },[books, id])
@@ -58,7 +58,7 @@ export default function BookEdit(props) {
       </label>
       <label>
         Description:
-        <input
+        <textarea
           type="textarea"
           name='description'
           value={formData.description}
