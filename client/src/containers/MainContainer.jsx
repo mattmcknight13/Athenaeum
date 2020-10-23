@@ -3,9 +3,9 @@ import { Route, Switch, useHistory } from 'react-router-dom'
 import { getAllBooks, postBook, putBook, destroyBook } from '../services/books'
 import { getAllGenres } from '../services/genres'
 import Books from '../screens/Books/Books'
-import BookCreate from '../screens/BookCreate'
+import BookCreate from '../screens/Create/BookCreate'
 import BookDetail from '../screens/Detail/BookDetail'
-import BookEdit from '../screens/BookEdit'
+import BookEdit from '../screens/Edit/BookEdit'
 
 export default function MainContainer() {
   const [books, setBooks] = useState([])
@@ -57,6 +57,7 @@ export default function MainContainer() {
       <Route path='/books/:id/edit'>
         <BookEdit
           handleBookEdit={handleBookEdit} 
+          books={books}
         />
         </Route>
       <Route path='/books/:id'>

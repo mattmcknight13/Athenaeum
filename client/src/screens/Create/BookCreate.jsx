@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router'
+import { addGenre } from '../../services/books'
 
-export default function BookEdit(props) {
-  const { handleBookEdit } = props
-  const { id } = useParams()
+
+export default function BookCreate(props) {
+  const { genres } = props
   const [formData, setFormData] = useState({
     title: '',
     author: '',
@@ -11,6 +11,8 @@ export default function BookEdit(props) {
     image: '',
     genre: ''
   })
+  
+  const { handleBookCreate } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,14 +21,14 @@ export default function BookEdit(props) {
       [name]: value
     })
   }
-
+ 
 
   return (
-    <form onSubmit={(e) => {
+    <form onSubmit={ async (e) => {
       e.preventDefault();
-      handleBookEdit(id, formData);
+      handleBookCreate(formData);
     }}>
-      <h3>Edit Book</h3>
+      <h3>Add Book</h3>
       <label>
         Title:
         <input
@@ -36,8 +38,7 @@ export default function BookEdit(props) {
           onChange={handleChange}
         />
       </label>
-      <label>
-        Author:
+      <label> Author:
         <input
           type="text"
           name='author'
@@ -45,8 +46,7 @@ export default function BookEdit(props) {
           onChange={handleChange}
         />
       </label>
-      <label>
-        Description:
+      <label>Description
         <input
           type="textarea"
           name='description'
@@ -54,16 +54,24 @@ export default function BookEdit(props) {
           onChange={handleChange}
         />
       </label>
-      <label>
-        Cover Art:
+      <label>Cover image
         <input
           type="text"
           name='image'
+          alt={formData.title}
           value={formData.image}
           onChange={handleChange}
         />
       </label>
-      <button>Edit</button>
+      <label htmlFor='genre'> 
+        <select id='genre' defaultValue='default' name='genre_id' onChange={handleChange}>
+          <option disabled value='default'>--select Genre--</option>
+          {genres.map(genre => (
+            <option value={genre.id} key={genre.id}>{genre.name}</option>
+          ))}
+        </select>
+      </label>
+      <button>Create</button>
     </form>
   )
 }

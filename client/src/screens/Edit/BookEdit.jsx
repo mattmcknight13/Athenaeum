@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { addGenre } from '../services/books'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router'
+import './BookEdit.css'
 
-
-export default function BookCreate(props) {
-  const { genres } = props
+export default function BookEdit(props) {
+  const { handleBookEdit, books } = props
+  const { id } = useParams()
   const [formData, setFormData] = useState({
     title: '',
     author: '',
@@ -11,24 +12,32 @@ export default function BookCreate(props) {
     image: '',
     genre: ''
   })
-  
-  const { handleBookCreate } = props;
+
+  useEffect(() => {
+    const preFillFormData = () => {
+      const { name, value } = books.find(book => book.id === Number(id))
+      setFormData({
+        ...formData,
+        [name]: value })
+    }
+    if (books.length) {
+      preFillFormData()
+    }
+  },[books, id])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
-    })
+      [name]: value })
   }
- 
 
   return (
-    <form onSubmit={ async (e) => {
+    <form onSubmit={(e) => {
       e.preventDefault();
-      handleBookCreate(formData);
+      handleBookEdit(id, formData);
     }}>
-      <h3>Add Book</h3>
+      <h3>Edit Book</h3>
       <label>
         Title:
         <input
@@ -38,7 +47,8 @@ export default function BookCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <label> Author:
+      <label>
+        Author:
         <input
           type="text"
           name='author'
@@ -46,7 +56,8 @@ export default function BookCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <label>Description
+      <label>
+        Description:
         <input
           type="textarea"
           name='description'
@@ -54,24 +65,16 @@ export default function BookCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <label>Cover image
+      <label>
+        Cover Art:
         <input
           type="text"
           name='image'
-          alt={formData.title}
           value={formData.image}
           onChange={handleChange}
         />
       </label>
-      <label htmlFor='genre'> 
-        <select id='genre' defaultValue='default' name='genre_id' onChange={handleChange}>
-          <option disabled value='default'>--select Genre--</option>
-          {genres.map(genre => (
-            <option value={genre.id} key={genre.id}>{genre.name}</option>
-          ))}
-        </select>
-      </label>
-      <button>Create</button>
+      <button>Edit</button>
     </form>
   )
 }
