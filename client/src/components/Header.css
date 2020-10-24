@@ -1,13 +1,18 @@
 .header {
   background-color: #ab92bf;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.head {
+  display: flex;
   justify-content: space-between;
 }
 
 .site-name {
   color: #d6ca98;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .login {
