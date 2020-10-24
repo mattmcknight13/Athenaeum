@@ -44,7 +44,8 @@ export default function MainContainer() {
 
   const handleBookDelete = async (id) => {
     await destroyBook(id)
-    setBooks(prevState => prevState.filter(book => book.id !== id))
+    setBooks(prevState => (prevState.filter(book => book.id !== Number(id))))
+    
     history.push('/books')
   }
 
