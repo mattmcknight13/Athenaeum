@@ -9,7 +9,6 @@
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;
-  
 }
 
 .head {
@@ -83,12 +82,6 @@ li{
 .nav-link:active {
   background-color: purple;
 }
-
-/* .nav-link:visited {
-  background-color: #;
-} */
-
-
 
 .logout {
   height: 20px;
