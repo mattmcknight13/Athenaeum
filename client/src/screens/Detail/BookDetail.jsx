@@ -4,7 +4,7 @@ import { getOneBook } from "../../services/books";
 import "./BookDetail.css";
 
 export default function BookDetail(props) {
-  const { handleBookDelete } = props;
+  const { handleBookDelete, currentUser } = props;
   const [book, setBook] = useState(null);
   const { id } = useParams();
 
@@ -36,21 +36,23 @@ export default function BookDetail(props) {
           </>
         )}
       </div>
-      <div className="buttons">
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            handleBookDelete(id);
-          }}
-        >
-          Delete
+      { currentUser &&
+        <div className="buttons">
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              handleBookDelete(id);
+            }}
+          >
+            Delete
         </button>
-        {book && (
-          <Link to={`/books/${book.id}/edit`}>
-            <button>Edit</button>
-          </Link>
-        )}
-      </div>
+          {book && (
+            <Link to={`/books/${book.id}/edit`}>
+              <button>Edit</button>
+            </Link>
+          )}
+        </div>
+      }
     </div>
   );
 }

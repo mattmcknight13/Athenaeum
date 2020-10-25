@@ -17,6 +17,11 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
+    if (currentUser !== null)
+      history.push(`/user/${currentUser.id}/books`)
+  })
+
+  useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
       setCurrentUser(userData);
@@ -53,7 +58,7 @@ function App() {
           <Register handleRegister={handleRegister} />
         </Route>
         <Route path="/">
-          <MainContainer />
+          <MainContainer currentUser={currentUser} />
         </Route>
       </Switch>
     </Layout>

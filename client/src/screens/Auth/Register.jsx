@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Register.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ export default function Register(props) {
     }))
   }
   return (
-    <form onSubmit={(e)=>{
+    <form className='register-page' onSubmit={(e)=>{
       e.preventDefault();
       handleRegister(formData);
     }}>
@@ -28,29 +29,35 @@ export default function Register(props) {
         <p>{error}</p>
       }
       <label>
-        Username:
+        
+         <br/>
         <input
           type="text"
           value={name}
           name="name"
+          placeholder='Username'
           onChange={handleChange}
         />
       </label>
       <label>
-        Email:
+        
+         <br/>
         <input
           type="text"
           value={email}
           name="email"
+          placeholder='Email'
           onChange={handleChange}
         />
       </label>
       <label>
-        Password:
+        
+         <br/>
         <input
           type="password"
           value={password}
           name="password"
+          placeholder='Password'
           onChange={handleChange}
         />
       </label>
