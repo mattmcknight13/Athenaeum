@@ -3,15 +3,19 @@ import './Books.css'
 import { Link } from 'react-router-dom'
 
 export default function Books(props) {
-  const { books } = props
+  const { books, currentUser } = props
   return (
     <div className='books'>
       <div className='page title'>
+      </div>
+      { currentUser &&
+        <div className='create'>
+          <Link to='/books/new'><button>Add Book</button></Link>
         </div>
-      <div className='create'>
-        <Link to='/books/new'><button>Add Book</button></Link>
-        </div>
+      
+      }
       <div>
+      
       <div className='collection'>
       {
         books.map(book => (

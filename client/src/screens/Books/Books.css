@@ -32,7 +32,7 @@ td {
   height: 250px;
   margin: 40px;
   transition: 250ms all;
-  box-shadow: 3px 5px 3px 2px black;
+  box-shadow: 3px 5px 3px 2px rgb(119, 118, 118);
 }
 .img:hover {
   transform: scale(1.02);

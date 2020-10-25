@@ -8,7 +8,9 @@ import BookCreate from "../screens/Create/BookCreate";
 import BookDetail from "../screens/Detail/BookDetail";
 import BookEdit from "../screens/Edit/BookEdit";
 
-export default function MainContainer() {
+export default function MainContainer(props) {
+  const { currentUser } = props
+  
   const [books, setBooks] = useState([]);
   const [userBooks, setUserBooks] = useState([]);
   const [genres, setGenres] = useState([]);
@@ -64,10 +66,10 @@ export default function MainContainer() {
         <BookEdit handleBookEdit={handleBookEdit} books={books} />
       </Route>
       <Route path="/books/:id">
-        <BookDetail handleBookDelete={handleBookDelete} />
+        <BookDetail handleBookDelete={handleBookDelete} currentUser={currentUser} />
       </Route>
       <Route path="/books">
-        <Books books={books} />
+        <Books books={books} currentUser={currentUser}  />
       </Route>
     </Switch>
   );
