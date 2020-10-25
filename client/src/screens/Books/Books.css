@@ -8,7 +8,6 @@ td {
 .books {
   display: flex;
   flex-direction: column;
-  width: 400px;
   justify-content: center;
 }
 .col-1 {
@@ -21,21 +20,25 @@ td {
   min-height: 100vh;
   display: flex;
   flex-flow: wrap;
-  /* justify-content: center; */
+  justify-content: center;
+  
 }
+
 
 .img {
   width: 200px;
   height: 250px;
   margin: 70px;
+  transition: 250ms all;
+  box-shadow: 3px 5px 3px 2px black;
+}
+.img:hover {
+  transform: scale(1.02);
+  opacity: .9;
 }
 
 @media only screen and (min-width: 768px) {
-  .books {
-    min-height: 100vh;
-    width: 300px;
-  }
-
+ 
   .collection {
     min-height: 100vh;
     width: 900px;
@@ -50,11 +53,7 @@ td {
 }
 
 @media only screen and (min-width: 1200px) {
-  .books {
-    min-height: 100vh;
-    width: 1000px;
-  }
-
+  
   .img {
     width: 200px;
     height: 300px;

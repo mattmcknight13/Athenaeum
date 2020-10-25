@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import { getAllBooks, postBook, putBook, destroyBook } from "../services/books";
 import { getAllGenres } from "../services/genres";
-import Collection from "../screens/Collection";
+import Collection from "../screens/Collection/Collection";
 import Books from "../screens/Books/Books";
 import BookCreate from "../screens/Create/BookCreate";
 import BookDetail from "../screens/Detail/BookDetail";

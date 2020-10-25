@@ -1,7 +1,7 @@
 import React, { useEffect} from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-import { getUserBooks } from '../services/books'
+import { getUserBooks } from '../../services/books'
 
 export default function Collection(props) {
   const { userBooks, setUserBooks } = props

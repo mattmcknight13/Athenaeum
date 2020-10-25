@@ -1,0 +1,24 @@
+.create-page {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+label {
+  /* display: block; */
+  margin: 20px;
+}
+
+.create-btn {
+  width: 140px;
+}

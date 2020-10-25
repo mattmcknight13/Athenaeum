@@ -24,10 +24,10 @@ export default function BookDetail(props) {
               <img className="image" src={book.image} alt={book.title} />
             </div>
             <div>
-              <div>
-                <h1 className="detail-Title">{book.title}</h1>
-                <h3 className="detail-Author"> by {book.author}</h3>
-                <h5 className="detail-Genre">{book.genre.name}</h5>
+              <div className='info-box'>
+                <h1 className="detail-title">{book.title}</h1>
+                <h3 className="detail-author"> by {book.author}</h3>
+                <h5 className="detail-genre">{book.genre.name}</h5>
               </div>
               <div className="text-box">
                 <span className="detail-Description">"{book.description}"</span>

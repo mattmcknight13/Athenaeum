@@ -31,11 +31,11 @@ export default function Header(props) {
             <ol>
               {currentUser && (
                 <li>
-                  <Link to={`/user/${currentUser.id}/books`}>My Books</Link>
+                  <Link className='nav-link' to={`/user/${currentUser.id}/books`}>My Books</Link>
                 </li>
               )}
               <li>
-                <Link to="/books">Browse Books</Link>
+                <Link className='nav-link' to="/books">Browse</Link>
               </li>
             </ol>
           </nav>
