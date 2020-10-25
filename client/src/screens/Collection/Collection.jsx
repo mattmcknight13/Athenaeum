@@ -2,6 +2,7 @@ import React, { useEffect} from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import { getUserBooks } from '../../services/books'
+import './Collection.css'
 
 export default function Collection(props) {
   const { userBooks, setUserBooks } = props
@@ -18,19 +19,19 @@ export default function Collection(props) {
 
 
   return (
-    <table>
-    <tbody>
+    <div className='my-collection-page'>
+    <div className='my-collection'>
       {
         userBooks &&
         userBooks.map(book => (
-          <tr key={book.id}>
-            <td>
+          <div key={book.id}>
+            <div>
               <Link to={`/books/${book.id}`}><img className='img' src={book.image} alt={book.title} /></Link>
-              </td>
-          </tr>
+              </div>
+          </div>
         ))
         }
-      </tbody>
-      </table>
+      </div>
+      </div>
   )
 }
