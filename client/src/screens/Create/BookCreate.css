@@ -1,0 +1,23 @@
+.create-page {
+
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+ 
+}
+
+label {
+  
+  margin: 20px;
+}
+
+.create-btn {
+  width: 140px;
+}

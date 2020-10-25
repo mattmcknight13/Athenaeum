@@ -13,17 +13,17 @@ export default function BookEdit(props) {
     genre: ''
   })
 
-  useEffect(() => {
-    const preFillFormData = () => {
-      const { name, value } = books.filter(book => book.id === Number(id))
-      setFormData({
-        ...formData,
-        [name]: value })
-    }
-    if (books.length > 0) {
-      preFillFormData()
-    }
-  },[books, id,formData])
+  // useEffect(() => {
+  //   const preFillFormData = () => {
+  //     const { name, value } = books.filter(book => book.id === Number(id))
+  //     setFormData({
+  //       ...formData,
+  //       [name]: value })
+  //   }
+  //   if (books.length) {
+  //     preFillFormData()
+  //   }
+  // },[books, id,formData])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,13 +33,14 @@ export default function BookEdit(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
+    <form className='edit-page' onSubmit={(e) => {
       e.preventDefault();
       handleBookEdit(id, formData);
     }}>
       <h3>Edit Book</h3>
       <label>
-        Title:
+        Title
+         <br/>
         <input
           type="text"
           name='title'
@@ -48,7 +49,8 @@ export default function BookEdit(props) {
         />
       </label>
       <label>
-        Author:
+        Author
+         <br/>
         <input
           type="text"
           name='author'
@@ -57,7 +59,8 @@ export default function BookEdit(props) {
         />
       </label>
       <label>
-        Description:
+        Description
+         <br/>
         <textarea
           type="textarea"
           name='description'
@@ -66,7 +69,8 @@ export default function BookEdit(props) {
         />
       </label>
       <label>
-        Cover Art:
+        Cover Art
+         <br/>
         <input
           type="text"
           name='image'

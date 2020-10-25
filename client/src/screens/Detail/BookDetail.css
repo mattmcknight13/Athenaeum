@@ -1,19 +1,31 @@
 .book-Detail {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .book-Info {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .image {
-  width: 230px;
-  height: 300px;
+  box-shadow: 3px 5px 3px 2px black;
+  width: 130px;
+  height: 200px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .text-box {
-  width: 300px;
+  margin-left: 20px;
+  width: 250px;
   word-wrap: break-word;
 }
 
@@ -23,13 +35,17 @@
 }
 
 .buttons {
+  display: flex;
+  justify-content: space-evenly;
   margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .image {
-    width: 530px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
   }
 
   .detail-Description {

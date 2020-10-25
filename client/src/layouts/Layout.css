@@ -1,4 +1,8 @@
-.app {
-  height: 100vh;
-  /* background-color: linen; */
+
+.body {
+  /* margin-top: 180px; */
+  background-image: linear-gradient(linen,royalblue);
+  min-height: 100vh;
+  min-width: 100vw;
+  
 }
