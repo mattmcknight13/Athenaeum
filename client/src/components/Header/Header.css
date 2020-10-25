@@ -53,9 +53,11 @@ li{
 
 .nav-link {
   font-size: 26px;
+  font-weight: 700;
   text-decoration: none;
   text-decoration-line: none;
   color: #d6ca98;
+  
 
 }
 

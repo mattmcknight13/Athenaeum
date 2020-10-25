@@ -35,8 +35,11 @@
 }
 
 .buttons {
+  display: flex;
+  justify-content: space-evenly;
   margin-top: 30px;
   margin-left: 100px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {

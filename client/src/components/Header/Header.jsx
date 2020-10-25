@@ -9,7 +9,7 @@ export default function Header(props) {
     <>
       <div className="header">
         <div className='head'>
-        <div className="site-name">
+          <div className="site-name"> 
           <h1>Athenaeum</h1>
         </div>
         <div className="login">

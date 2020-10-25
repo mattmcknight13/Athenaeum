@@ -16,8 +16,12 @@ td {
   justify-content: space-evenly;
 }
 
+.create {
+  margin-top: 20px;
+  
+}
+
 .collection {
-  /* min-height: 100vh; */
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -26,7 +30,7 @@ td {
 .img {
   width: 200px;
   height: 250px;
-  margin: 70px;
+  margin: 40px;
   transition: 250ms all;
   box-shadow: 3px 5px 3px 2px black;
 }
@@ -40,12 +44,8 @@ td {
  
   .collection {
     display: flex;
-    flex-direction: column;
-   
-    min-height: 100vh;
-    width: 900px;
-    
-    align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
   }
 
   .img {
@@ -55,6 +55,12 @@ td {
 }
 
 @media only screen and (min-width: 1200px) {
+  .collection {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
   
   .img {
     width: 200px;
