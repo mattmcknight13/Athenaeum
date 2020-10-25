@@ -21,7 +21,7 @@ export default function Header(props) {
               </button>
             </>
           ) : (
-            <Link to="/login">Login/Register</Link>
+            <Link  className='login-link' to="/login">Login/Register</Link>
           )}
           </div>
         </div>

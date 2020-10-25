@@ -29,32 +29,35 @@ export default function Register(props) {
         <p>{error}</p>
       }
       <label>
-        Username
+        
          <br/>
         <input
           type="text"
           value={name}
           name="name"
+          placeholder='Username'
           onChange={handleChange}
         />
       </label>
       <label>
-        Email
+        
          <br/>
         <input
           type="text"
           value={email}
           name="email"
+          placeholder='Email'
           onChange={handleChange}
         />
       </label>
       <label>
-        Password
+        
          <br/>
         <input
           type="password"
           value={password}
           name="password"
+          placeholder='Password'
           onChange={handleChange}
         />
       </label>

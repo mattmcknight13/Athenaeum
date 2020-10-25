@@ -1,5 +1,4 @@
 .header {
-  
   background-color: #ab92bf;
   border: solid then purple;
   box-shadow: 0px 1px 10px darkgray;
@@ -40,7 +39,27 @@
   justify-content: flex-end;
   align-items: center;
   flex-grow: 2;
+  color: black;
+  background-color: #ab92bf;
+  /* padding: 10px; */
 }
+
+.login-link {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+.login-link:hover {
+  background-color: purple;
+  
+}
+
+.login-link:active {
+  background-color: purple;
+}
+
 
 ol{
   display: flex;
@@ -58,10 +77,22 @@ li{
   font-weight: 700;
   text-decoration: none;
   text-decoration-line: none;
-  color: #d6ca98;
-  
-
+  color: black;
+  background-color: #ab92bf;
+  padding: 10px;
 }
+.nav-link:hover {
+  background-color: purple;
+  
+}
+
+.nav-link:active {
+  background-color: purple;
+}
+
+/* .nav-link:visited {
+  background-color: #;
+} */
 
 
 

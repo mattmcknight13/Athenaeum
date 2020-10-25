@@ -27,41 +27,45 @@ export default function BookEdit(props) {
     }}>
       <h3>Edit Book</h3>
       <label>
-        Title
+        
          <br/>
         <input
           type="text"
           name='title'
+          placeholder='Title'
           value={formData.title}
           onChange={handleChange}
         />
       </label>
       <label>
-        Author
+        
          <br/>
         <input
           type="text"
           name='author'
+          placeholder='author'
           value={formData.author}
           onChange={handleChange}
         />
       </label>
       <label>
-        Description
+        
          <br/>
         <textarea
           type="textarea"
           name='description'
+          placeholder='Description'
           value={formData.description}
           onChange={handleChange}
         />
       </label>
       <label>
-        Cover Art
+        
          <br/>
         <input
           type="text"
           name='image'
+          placeholder='cover art'
           value={formData.image}
           onChange={handleChange}
         />
