@@ -24,7 +24,8 @@ export default function Header(props) {
             <Link to="/login">Login/Register</Link>
           )}
           </div>
-          </div>
+        </div>
+        
 
         <div className="nav">
           <nav>
@@ -41,7 +42,7 @@ export default function Header(props) {
           </nav>
           
         </div>
-        <hr />
+        
       </div>
       
     </>

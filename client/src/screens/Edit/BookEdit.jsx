@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import './BookEdit.css'
 
 export default function BookEdit(props) {
-  const { handleBookEdit, books } = props
+  const { handleBookEdit } = props
   const { id } = useParams()
   const [formData, setFormData] = useState({
     title: '',
@@ -12,18 +12,6 @@ export default function BookEdit(props) {
     image: '',
     genre: ''
   })
-
-  // useEffect(() => {
-  //   const preFillFormData = () => {
-  //     const { name, value } = books.filter(book => book.id === Number(id))
-  //     setFormData({
-  //       ...formData,
-  //       [name]: value })
-  //   }
-  //   if (books.length) {
-  //     preFillFormData()
-  //   }
-  // },[books, id,formData])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

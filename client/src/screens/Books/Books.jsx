@@ -9,7 +9,7 @@ export default function Books(props) {
       <div className='page title'>
         </div>
       <div className='create'>
-        <Link to='/books/new'><button>Create</button></Link>
+        <Link to='/books/new'><button>Add Book</button></Link>
         </div>
       <div>
       <div className='collection'>

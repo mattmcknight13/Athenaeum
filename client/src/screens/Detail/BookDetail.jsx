@@ -37,7 +37,7 @@ export default function BookDetail(props) {
         )}
       </div>
       <div className="buttons">
-        <button
+        <button 
           onClick={(e) => {
             e.preventDefault();
             handleBookDelete(id);

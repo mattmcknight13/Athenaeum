@@ -92,7 +92,7 @@ export default function BookCreate(props) {
             ))}
           </select>
         </label>
-        <button className="create-btn">Create</button>
+        <button className="create-btn">Add</button>
       </form>
     </div>
   );
