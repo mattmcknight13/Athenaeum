@@ -86,16 +86,16 @@ src
 
 | Task                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------ | :------: | :------------: | :-----------: | :---------: |
-| begin Backend            |    H     |     3 hrs      |               |             |
-| create crud actions      |    H     |     3 hrs      |               |             |
-| Schema                   |    H     |      2hrs      |               |             |
-| tables                   |    m     |      2hrs      |               |             |
-| Test backend             |    l     |      1hrs      |               |             |
-| begin front end skeleton |    H     |      3hrs      |               |             |
-| api config and test      |    H     |      2hrs      |               |             |
-| begiin indiviudal pages  |    H     |      9hrs      |               |             |
-| css                      |    m     |      5hrs      |               |             |
-| TOTAL                    |          |     36 hrs     |               |             |
+| begin Backend            |    H     |     3 hrs      |   4hrs            |      4hrs       |
+| create crud actions      |    H     |     3 hrs      |         1hrs      |       1hrs      |
+| Schema                   |    H     |      2hrs      |        1hrs       |        1hrs     |
+| tables                   |    m     |      2hrs      |         1hrs      |        1hrs     |
+| Test backend             |    l     |      1hrs      |        2hrs       |       2hrs      |
+| begin front end skeleton |    H     |      3hrs      |          5hrs     |      5hrs       |
+| api config and test      |    H     |      2hrs      |          2hrs     |        2hrs     |
+| begiin indiviudal pages  |    H     |      9hrs      |          17hrs     |       17hrs      |
+| css                      |    m     |      5hrs      |          5hrs     |        5hrs     |
+| TOTAL                    |          |     36 hrs     |               |       38hrs      |
 
 <br>
 
