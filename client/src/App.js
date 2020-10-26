@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Login from './screens/Auth/Login'
-import Register from './screens/Auth/Register'
-import MainContainer from './containers/MainContainer'
+import Login from "./screens/Auth/Login";
+import Register from "./screens/Auth/Register";
+import MainContainer from "./containers/MainContainer";
 import Layout from "./layouts/Layout";
 import {
   loginUser,
@@ -17,9 +17,8 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-    if (currentUser !== null)
-      history.push(`/user/${currentUser.id}/books`)
-  })
+    if (currentUser !== null) history.push(`/user/${currentUser.id}/books`);
+  });
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -44,7 +43,7 @@ function App() {
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem("authToken");
-    history.push('/')
+    history.push("/");
     removeToken();
   };
 

@@ -50,7 +50,7 @@
 }
 
 .login-link:active {
-  background-color: purple;
+  background-color: gold;
 }
 
 
@@ -80,7 +80,7 @@ li{
 }
 
 .nav-link:active {
-  background-color: purple;
+  background-color: gold;
 }
 
 .logout {
