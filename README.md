@@ -109,8 +109,10 @@ src
 
 ---
 
-## Post-MVP
+## Post-MVPhttp://well-to-do-arch.surge.sh/books
 
+- Seperate permissions of things like crud between types of signed in accounts (admin/user) so only admin can use crud actions, while users can add books to their collections and have other actions.
+- Add book to your collection
 - Sort by genre
 - make sure multiple books of same name are not added to database
 - reccomnded reading based on genre
