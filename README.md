@@ -6,6 +6,9 @@
 
 Is the beginnings of a online personal library index system, you will be able to catalog your books by adding descritptions and images of them, which will allow you to personally keep track of what you do and don't have and be able to share with others so you can lend to your friends.
 
+
+To test site, use username: user2 password: 123456
+
 <br>
 
 ## MVP
